@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".AgeInputActivity"
+                android:background="@android:color/white"
+                android:weightSum="1">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ageInput"
+        android:src="@drawable/age_input_image"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:layout_weight="0.33"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter your birth date"
+        android:id="@+id/enterDob"
+        android:textColor="#ff1546ff"
+        android:textStyle="bold|italic"
+        android:paddingStart="@dimen/activity_horizontal_margin"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/enterDay"
+        android:layout_weight="0.13"
+        android:hint="Day (dd)"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/enterMonth"
+        android:layout_weight="0.13"
+        android:hint="Month (mm)"/>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/enterYear"
+        android:layout_weight="0.13"
+        android:hint="Year (yyyy)"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Now calculate your age in. . ."
+        android:id="@+id/calculateAge"
+        android:layout_below="@+id/ageChoice"
+        android:textColor="#ff1546ff"
+        android:textStyle="bold|italic"
+        android:paddingStart="@dimen/activity_horizontal_margin"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ageChoice"
+        android:orientation="vertical">
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Days"
+        android:id="@+id/radioButtonDay"
+        android:onClick="OnRadioButtonClicked"
+        />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weeks"
+        android:id="@+id/radioButtonWeek"
+        android:onClick="OnRadioButtonClicked"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Months"
+        android:id="@+id/radioButtonMonth"
+        android:onClick="OnRadioButtonClicked"/>
+
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/reset"
+        android:textColor="#ff1546ff"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
